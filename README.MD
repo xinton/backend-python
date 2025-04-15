@@ -28,14 +28,23 @@ python 3_contar_palavras.py
   ```bash
   pip install pandas openpyxl
   ```
+  
 - `2_pilha.py`: Implementa uma pilha com operações básicas usando lista nativa. Inclui testes automatizados com `assert` e um modo interativo opcional para executar operações via terminal.
-- `3_contar_palavras.py`: Lê palavras do terminal e conta quantas vezes cada uma aparece.
+
+- `3_contar_palavras.py`: Lê palavras do terminal ou arquivo .txt e conta quantas vezes cada uma aparece. Suporta dois modos de entrada:
+  - Modo Manual: Digite palavras diretamente no terminal
+  - Modo Arquivo: Lê palavras de um arquivo .txt (extensão .txt é adicionada automaticamente)
+  ```bash
+  python 3_contar_palavras.py
+  ```
+
 - `4_fibonacci.py`: Calcula o n-ésimo número da sequência de Fibonacci com dois modos de execução:
   - Modo Iterativo: Implementação eficiente com complexidade O(n) e memória constante O(1)
   - Modo Recursivo: Implementação didática com complexidade O(2^n), não recomendada para números grandes devido à recursão múltipla
   ```bash
   python 4_fibonacci.py
   ```
+
 - `5_inventario.py`: Sistema de gerenciamento de inventário com menu interativo.
 
 ---
