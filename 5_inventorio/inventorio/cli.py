@@ -51,6 +51,48 @@ def remove(name: str = typer.Option(..., prompt=True, help="Nome do produto")):
     else:
         typer.echo(f"Produto '{name}' não encontrado.")
 
+@app.command()
+def search_category(
+    category: str = typer.Option(..., prompt=True, help="Categoria a ser buscada")
+):
+    """Busca produtos por categoria"""
+    products = service.get_by_category(category)
+    if not products:
+        typer.echo(f"Nenhum produto encontrado na categoria '{category}'.")
+        return
+    
+    typer.echo(f"\nProdutos na categoria '{category}':")
+    for product in products:
+        typer.echo(f"- {product.name}: R$ {product.price:.2f}, Quantidade: {product.quantity}")
+
+@app.command()
+def most_expensive():
+    """Exibe o produto mais caro do inventário"""
+    product = service.get_most_expensive()
+    if not product:
+        typer.echo("O inventário está vazio!")
+        return
+    
+    typer.echo(f"Produto mais caro: {product.name}, Preço: R$ {product.price:.2f}")
+
+@app.command()
+def below_stock(
+    minimum: int = typer.Option(..., prompt=True, help="Quantidade mínima de estoque")
+):
+    """Lista produtos abaixo do estoque mínimo"""
+    if minimum < 0:
+        typer.echo("O estoque mínimo não pode ser negativo!")
+        return
+    
+    products = service.get_below_stock(minimum)
+    if not products:
+        typer.echo(f"Nenhum produto abaixo do estoque mínimo de {minimum}.")
+        return
+    
+    typer.echo(f"\nProdutos com estoque abaixo de {minimum}:")
+    for product in products:
+        typer.echo(f"- {product.name}: Quantidade: {product.quantity}")
+
 def main():
     app()
 
