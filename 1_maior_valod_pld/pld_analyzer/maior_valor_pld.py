@@ -1,4 +1,3 @@
-
 import pandas as pd
 
 def extrair_maximos_submercado_anual(arquivo_excel):
@@ -38,9 +37,12 @@ def extrair_maximos_submercado_anual(arquivo_excel):
             dados_sub = resultado[resultado['Submercado'] == submercado]
             for _, row in dados_sub.iterrows():
                 print(f"Ano: {row['Ano']} - Maior PLD: {row['Valor']:.2f}")
+        
+        return resultado  # Add this line to return the DataFrame
 
     except Exception as e:
         print("Erro ao processar o arquivo:", e)
+        return None
 
 if __name__ == "__main__":
     extrair_maximos_submercado_anual("PLD.xlsx")
