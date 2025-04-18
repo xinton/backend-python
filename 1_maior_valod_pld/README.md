@@ -25,11 +25,34 @@ pip install pandas openpyxl
 
 2. Coloque seu arquivo `PLD.xlsx` no mesmo diretório do script.
 
+## Estrutura de Arquivos
+
+Coloque o arquivo `PLD.xlsx` na pasta raiz do projeto:
+
+```
+1_maior_valor_pld/
+├── PLD.xlsx           <- Arquivo de dados aqui
+├── setup.py
+└── pld_analyzer/
+    ├── __init__.py
+    ├── maior_valor_pld.py
+    └── tests/
+```
+
 ## Uso
 
 Execute o script diretamente:
 ```bash
 python maior_valor_pld.py
+```
+
+## Executando
+
+1. Certifique-se de que o arquivo `PLD.xlsx` está na pasta correta
+2. Execute o script:
+```bash
+cd 1_maior_valor_pld
+python pld_analyzer/maior_valor_pld.py
 ```
 
 ### Formato do Excel Esperado
