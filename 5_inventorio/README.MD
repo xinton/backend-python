@@ -2,7 +2,7 @@
 
 Um sistema de linha de comando para gerenciar inventário de produtos, desenvolvido em Python usando arquitetura limpa e boas práticas de desenvolvimento.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Adicionar produtos com nome, categoria, preço e quantidade
 - Remover produtos do inventário
@@ -11,12 +11,12 @@ Um sistema de linha de comando para gerenciar inventário de produtos, desenvolv
 - Verificar produtos com baixo estoque
 - Persistência de dados em arquivo JSON
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - Python 3.10+
 - pip (gerenciador de pacotes Python)
 
-## 🔧 Instalação
+## Instalação
 
 1. Clone o repositório:
 ```bash
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## 💻 Uso
+## Uso
 
 O sistema pode ser executado de duas formas:
 
@@ -88,7 +88,7 @@ Cada comando possui opções interativas e help:
 inventorio <comando> --help
 ```
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 inventorio/
@@ -108,24 +108,21 @@ Execute os testes usando pytest:
 python -m pytest
 ```
 
-## 📦 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - [Typer](https://typer.tiangolo.com/) - CLI moderno
 - [pytest](https://docs.pytest.org/) - Framework de testes
 - [Python](https://www.python.org/) - Linguagem de programação
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
 
-## 🔍 Exemplos de Uso
+## Exemplos de Uso
 
 ```bash
 # Adicionar novo produto
 inventorio add
-
-# Listar todos os produtos
-inventorio list
 
 # Buscar produtos da categoria 'Eletrônicos'
 inventorio search-category
@@ -141,4 +138,4 @@ inventorio below-stock
 
 ## 👥 Autor
 
-- Bruno - *Desenvolvimento inicial* - [bruno](https://github.com/seu-usuario)
+- Bruno - [xinton](https://github.com/xinton)
